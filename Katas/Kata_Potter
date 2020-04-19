@@ -27,8 +27,8 @@ public class KataPotter
 		
 		int[][] uniqueCases = new int[maxNumber][books.length];
 		
-		// The first set of nested loops below obviously sets up our location in the 2D array.
-		// Within the second loop, we're checking if the value > 0 to find the number of unique books purchased.
+		// Below, the first loop, obviously, determines the index of our array (of arrays).
+		// Within the second loop (the index of the nested array), we're checking if the value > 0 to find the number of unique books purchased.
 		// If we have a unique book, we set the corresponding place in our 2D array to 1 and subtract 1 from that index in the "books" array.  If no unique book, we set it to 0.
 		// As we loop through, we end up with a giant list representing the number of unique books at each pass (e.g. for {2, 2, 2, 1, 1}, we set our 2D array's first index to {1, 1, 1, 1, 1} and subtract 1 from the books array, leaving us with {1, 1, 1, 0, 0}. The second value in our 2D array will thusly be the same -- {1, 1, 1, 0, 0}
 		
