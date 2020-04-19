@@ -4,10 +4,7 @@ import java.util.ArrayList;
 import java.util.*;
 
 public class KataPrimeFactors 
-{
-	// I didn't do any TDD/testing for this -- just wanted to solve it.
-	// Why is this optional, but Potter isn't?!  This was simple & would be fairly easy to do TDD on!
-	
+{	
 	public List<Integer> factorize(int n)
 	{
 		List<Integer> primeSet = new ArrayList<>();
