@@ -46,8 +46,10 @@ public class KataPotter
 			}
 		}
 		
-		// The goal of this loop & its contents is to check for the case of a unique set of 5 followed by a unique set of 3 -- as is the case with {2, 2, 2, 1, 1} or {1, 2, 3, 4, 5}. Set of 3 can come anywhere after the set of 5, which I didn't originally account for (only checked i and i+1 before discovering bugs w/ other tests)
-		// If we encounter that sequence, we change each to set of 4.  The order of the #'s doesn't matter.
+		// The goal of this loop & its contents is to check for the case of a unique set of 5 followed by a unique set of 3 -- as is the case with {2, 2, 2, 1, 1} or {1, 2, 3, 4, 5}.
+		// A unique set of 5 books, followed by a unique set of 4 books, is our "unique" scenario, where we have an opportunity to find a cheaper price for our customer -- because we're a good book store.
+		// If we encounter that sequence, we update our unique set of 5 & unique set of 3 to two unique sets of 4 books. Two sets of 4 unique books are cheaper than 5 & 3.
+		// The order of the books doesn't matter for this algorithm -- just the total # of unique books per set.
 		for (int i = 0; i < uniqueCases.length - 1; i++)
 		{
 			int uniqueNumsCurrent = 0;
